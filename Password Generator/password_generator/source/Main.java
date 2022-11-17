@@ -1,5 +1,4 @@
 package password_generator.source;
-// import password_generator.source.*;
 import java.util.*;
 
 
@@ -9,6 +8,6 @@ public class Main {
         Generator generator = new Generator(keyboard);
         System.out.println("Welcome to Password Services :");
         generator.mainLoop();
-        keyboard.close();        
+        keyboard.close(); 
     }
 }

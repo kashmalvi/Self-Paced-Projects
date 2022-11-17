@@ -1,8 +1,5 @@
 package password_generator.source;
-// import password.Alphabet.java;
 import java.util.*;
-//to import package from different file
-// import javax.print.attribute.standard.PrinterMoreInfoManufacturer;
 
 public class Generator {
     Alphabet alphabet;
@@ -17,7 +14,7 @@ public class Generator {
     }
 
     /**********************************************Generatepassword*************************************************/
-    private Password Generatepassword(int length){
+    public Password Generatepassword(int length){
         final StringBuilder pass = new StringBuilder(""); //to build the string and store it in pass
         final int alphabetLength = alphabet.getAlphabeString().length();//to calculate the length of alphabets
         int max = alphabetLength - 1;
@@ -47,14 +44,14 @@ public class Generator {
 
     /*******************************************************CHECK PASSWORD*******************************************************/
     public void checkPassword(){
-        String input = "";
-        Scanner in = new Scanner(System.in);
+        String input ;
     
         System.out.println("\nEnter your password:");
-        input = in.nextLine();
-        final Password p = new Password(input);
-        System.out.println(p.calculateScore());//to check the strength of your password
-        in.close();
+        input = keyboard.nextLine();
+        input = keyboard.nextLine();
+        Password p = new Password(input);
+        String strength = p.calculateScore();
+        System.out.println(strength);//to check the strength of your password
     }
     
     /*******************************************Print Quitting Message***********************************************************/
@@ -146,8 +143,6 @@ public class Generator {
         int userOption = -1;
 
         while(userOption != 4){
-            System.out.println("Please opt from the above :");
-            
             userOption = keyboard.nextInt();
 
             switch(userOption){

@@ -5,8 +5,8 @@ public class Password {
 
     //constructor
     public Password(String s){
-        this.Value = s;
-        this.Length = s.length();
+        Value = s;
+        Length = s.length();
     }
 
     //here is check password function which check the strength of password
@@ -34,7 +34,7 @@ public class Password {
 
     //function to check the strength of password
     public int passwordStrength(){
-        String s = this.Value;
+        String s = Value;
         int score = 0;
         int type;
 
@@ -68,7 +68,7 @@ public class Password {
     public String calculateScore(){
         int score = this.passwordStrength();
 
-        if(score >= 6)
+        if(score >= 5)
             return "This is a Strong password ";
         else if(score >= 4)
             return "This is good password";
@@ -81,6 +81,6 @@ public class Password {
     }
 
     public String toString(){
-        return this.Value;
+        return Value;
     }
 }
